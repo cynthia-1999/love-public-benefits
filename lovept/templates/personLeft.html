@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>personLeft</title>
+<style>
+.table{
+font-family:"微软雅黑";
+font-size:25px;
+position:relative;
+margin-top:20px;
+font-weight:500;
+}
+
+.nav-item {
+  color:#FF5151;
+  padding: 20px;
+  text-decoration: none;
+  transition: .3s;
+  margin: 0 6px;
+  z-index: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+.nav-item:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #A60000;
+  border-radius: 8px 8px 0 0;
+  opacity: 0;
+  transition: .3s;
+}
+
+.nav-item:not(.is-active):hover:before {
+  opacity: 1;
+  bottom: 0;
+}
+
+.nav-item:not(.is-active):hover {
+  color:#A60000;
+}
+</style>
+</head>
+
+<body background="../static/image/signup_bg.png">
+<table class="table" align="center">
+  <tr><td><a href="personRight.html#grxx" target="showframe" class="nav-item"  active-color="#A60000">・&nbsp;个人信息</a></td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td><a href="personRight.html#hdqk" target="showframe" class="nav-item"  active-color="#A60000">・&nbsp;活动情况</a></td></tr>
+  <span class="nav-indicator"></span>
+</table>
+<script  src="../static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/*
+<!--
+
+* 17素材vip建站专区模块代码
+* 详尽信息请看官网：http://www.17sucai.com/pins/vip
+*
+* Copyright , 温州易站网络科技有限公司版权所有
+*
+* 请尊重原创，未经允许请勿转载。
+* 在保留版权的前提下可应用于个人或商业用途
+
+-->
+*/
+
+*{font-family: Microsoft Yahei; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; outline:none;}
+html{width:100%; height:100%;}
+body{width:100%; height:100%; margin:0; font-size:14px; line-height:1.75; color:#282828; background:#fff;}
+h1,h2,h3,h4,h5,h6{padding:0; margin:0; font-weight:normal;}
+ul,ol,li,p,dl,dt,dd{margin:0; padding:0; list-style:none;}
+img{border:none; vertical-align:middle;}
+a{text-decoration:none; color:#282828;
+transition:color .2s; -moz-transition:color .2s; -ms-transition:color .2s; -o-transition:color .2s; -webkit-transition:color .2s;}
+a:hover{color:#00c1de;}
+@media(max-width:767px){
+body{font-size:12px; line-height:1.5;}
+}
+.meal-box{padding:0 0 0 0; background:#f6f7fb;}
+.meal-title{text-align:center;}
+.meal-title h2{font-size:36px; color:#555; }
+.meal-title p{color:#888;}
+.meal-cut{width:100%; margin:0 auto; text-align:center; max-width:100%;}
+.meal-cut ul{padding:40px 0 60px 0;}
+.meal-cut ul:after{display:block; content:''; clear:both;}
+.meal-cut ul li{width:25%; float:left; padding:7.5px;}
+.meal-cut ul li span{background:#fff; border:1px solid #e9e9e9; display:block;}
+.meal-cut ul li i{width:80px; height:80px; border-radius:50%; display:block; margin:30px auto; 
+background:#ff8541; color:#fff; text-align:center; line-height:80px; font-size:36px;}
+.meal-cut ul li h3{display:block; font-size:20px;}
+.meal-cut ul li p{display:block; color:#888; max-width:70%; margin:20px auto;}
+.meal-cut ul li b{display:block; font-weight:normal; font-size:16px;}
+.meal-cut ul li b em{background:#ff8541; color:#fff; display:inline-block; line-height:16px; padding:0 3px; 
+margin:0 3px 0 0; font-size:12px; font-style:normal;}
+.meal-cut ul li font{display:block; margin:20px 0 0 0;}
+.meal-cut ul li font:after{display:block; content:''; clear:both;}
+.meal-cut ul li font a{float:left; width:50%; color:#fff; background:#ff8541; font-size:16px; line-height:40px;}
+.meal-cut ul li font a:first-child{border-right:1px solid #fff;}
+.meal-cut ul li:nth-child(1) i,
+.meal-cut ul li:nth-child(1) b em,
+.meal-cut ul li:nth-child(1) font a{background:#ff8541;}
+.meal-cut ul li:nth-child(2) i,
+.meal-cut ul li:nth-child(2) b em,
+.meal-cut ul li:nth-child(2) font a{background:#ffb731;}
+.meal-cut ul li:nth-child(3) i,
+.meal-cut ul li:nth-child(3) b em,
+.meal-cut ul li:nth-child(3) font a{background:#5a9bf9;}
+.meal-cut ul li:nth-child(4) i,
+.meal-cut ul li:nth-child(4) b em,
+.meal-cut ul li:nth-child(4) font a{background:#20ce9b;}
+.meal-cut ul li:nth-child(5) i,
+.meal-cut ul li:nth-child(5) b em,
+.meal-cut ul li:nth-child(5) font a{background:#ff8541;}
+.meal-cut ul li:nth-child(6) i,
+.meal-cut ul li:nth-child(6) b em,
+.meal-cut ul li:nth-child(6) font a{background:#ffb731;}
+.meal-cut ul li:nth-child(7) i,
+.meal-cut ul li:nth-child(7) b em,
+.meal-cut ul li:nth-child(7) font a{background:#5a9bf9;}
+.meal-cut ul li:nth-child(8) i,
+.meal-cut ul li:nth-child(8) b em,
+.meal-cut ul li:nth-child(8) font a{background:#20ce9b;}
+@media(max-width:767px){
+.meal-title{padding:0 30px;}
+.meal-title h2{font-size:24px;}
+.meal-cut ul{padding:20px 5px 30px 5px;}
+.meal-cut ul li{width:50%; float:left; padding:5px;}
+.meal-cut ul li h3{font-size:14px; font-weight:bold;}
+.meal-cut ul li p{display:block; color:#888; max-width:100%; margin:10px auto; padding:0 10px; height:54px; overflow:hidden;}
+.meal-cut ul li font a{font-size:12px; line-height:30px;}
+}
