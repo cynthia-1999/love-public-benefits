@@ -77,24 +77,25 @@ border-right:0px;
 
 <body background="../static/image/signup_bg.png">
 <div class="ph-heart-nav nav">
-		<a href="../home.html">主页</a>
-		<a href="../activity.html">活动</a>
-		<a href="#">关于我们</a>
+		<a href="../">主页</a>
+		<a href="../activity/">公益活动</a>
+		<a href="../thing/">公益账单</a>
 		<a href="#">加入我们</a>
 		<div class="effect">	</div>
 </div>
 <div class="up-logo"><img src="../static/image/logo.png" height="74" class="logo"  style="margin-top:15px" /> <span class="body STYLE6">爱心公益</span></div>
-	<div class="contain"  align="center">
+
+<div class="contain"  align="center">
 		<pre><p class="dl" align="left">&nbsp;公司报名成功!</p></pre>		
 		 <p>&nbsp;</p>  
 		  <p style=" font-family:'微软雅黑'; font-size:30px; color:#AA0000">贵公司邀请码是:</p>
-		  <p style=" font-family:'微软雅黑'; font-size:30px;">12345</p>
+		  <p style=" font-family:'微软雅黑'; font-size:30px;">{{ code }}</p>
 		  <p>&nbsp;</p>
 		  <p>
-		    <input type="submit" value="注册" class="button1"/>
+		    <input type="button" value="完成" onclick="window.location='../activity/'"  class="button1"/>
 	        </p>
 		  </div>
-		</form>
+
 	
 </div>
 </body>

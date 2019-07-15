@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lovept',
-    'peoplee',
 ]
 
 MIDDLEWARE = [
@@ -78,10 +77,19 @@ WSGI_APPLICATION = 'letmec.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',  # sql_server固定写法
+        'NAME': 'lovedb',
+        'USER': 'HDC@love',
+        'PASSWORD': 'Love@123456',
+        'HOST': 'love.database.chinacloudapi.cn',  # 数据库服务地址
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'SQL Server Native Client 10.0',  # 本机驱动程序名称
+            'MARS_Connection': True,
+        }
     }
 }
+
 
 
 # Password validation

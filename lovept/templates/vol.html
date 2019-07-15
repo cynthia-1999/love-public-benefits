@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>报名</title>
-<link type="text/css" rel="stylesheet" href="../static/css/style1.css">
+<link type="text/css" rel="stylesheet" href=" ../static/css/style1.css">
 <style type="text/css">
  .contain{
  background-color:#FFFFFF;
@@ -31,7 +31,7 @@
  text-align: center;
  background-color:#FFB5B5;
  color: black;
- font-size:24px;
+ font-size:12px;
  font-family:"微软雅黑";
  border: 2px solid #D00000;
  border-radius:5px;
@@ -41,6 +41,14 @@
  background-color:#D00000;
  color: white;
  }
+ 
+ a {
+ color:#000000;
+ text-decoration:none;
+ }
+ a:hover{
+ background-color:#D00000;
+ color: white;}
  
  .zc{
  font-family:"微软雅黑";
@@ -52,41 +60,51 @@
   text-decoration:underline;
  }
  
-.gs{width:200px;height:80px;border-radius:30px 5px; position:relative; margin-left:20px; float:left; margin-bottom:100px; margin-top:50px; font-size:36px} 
-.gr{width:200px;height:80px;border-radius:30px 5px; position:relative; margin-right:20px; float:right; margin-bottom:100px; margin-top:50px;  font-size:36px}
+.gs{width:150px;height:80px;border-radius:30px 5px; position:relative; margin-left:25%; float:left; margin-bottom:100px; margin-top:50px; font-size:36px} 
+.gc{width:150px;height:80px;border-radius:30px 5px; position:relative; margin-left:6%; float:left; margin-bottom:100px; margin-top:50px; font-size:36px} 
+.gr{width:190px;height:105px;border-radius:30px 5px; position:relative; margin-left:6%; float:left; margin-bottom:100px; margin-top:50px;  font-size:36px}
 
 .hdxq{
 font-family:"微软雅黑";
 font-size:23px;
 }
-</div>
 </style>
 </head>
 
-<body background="../static/image/signup_bg.png">
+<body background=" ../static/image/signup_bg.png">
 <div class="ph-heart-nav nav">
-		<a href="../home.html#">主页</a>
-		<a href="../activity.html">活动</a>
-		<a href="../vol.html">关于我们</a>
-		<a href="../vol.html">加入我们</a>
+		<a href="../ ">主页</a>
+		<a href=" ../activity/">公益活动</a>
+		<a href=" ../thing/">公益账单</a>
+		<a href=" #">加入我们</a>
 		<div class="effect">	</div>
 </div>
-<div class="up-logo"><img src="../static/image/logo.png" height="74" class="logo"  style="margin-top:15px" /> <span class="body STYLE6">爱心公益</span></div>
+
+<div class="up-logo"><img src=" ../static/image/logo.png" height="74" class="logo"  style="margin-top:15px" /> <span class="body STYLE6">爱心公益</span></div>
 	<div class="contain">
-		<pre><p class="dl"  align="center">活动名称</p></pre>
-		<p align="center"><img src="../static/image/9.jpg" width="80%" style="margin-top:8px; position:relative" url="images/person_info_icon.png" /></p>
+		<p class="dl"  align="center">{{ ActVolum.v_name }}</p>
+		<p align="center"><img src=" ../static/image/9.jpg" width="80%" style="margin-top:8px; position:relative" url=" ../static/images/person_info_icon.png" /></p>
 		<p style="position:relative; font-family:'微软雅黑'; color:#C10000; font-size:29px; margin-left:15px;">活动详情</p>
-		<pre><p class="hdxq">
+		<p class="hdxq">
+
+            {{ ActVolum.v_describe }}
 		
 		
-		lalalla
 		
-		
-		
-		</p></pre>
+		</p>
 		<p>&nbsp;  </p>
-		<p> <div class="gs button1"><a href="worksignin.html">公司报名</a> </div> <div class="gr button1">个人报名</div></p>
-	</div>
+		<p> </div>
+            <p></p>
+			<div class="gs button1"><a href="../worksignin/"><p>团体报名</p></a></div>
+			<div class="gc button1"><a href="../yqmtx/"><p>加入团体</p></a></div>
+
+
+                <form method="post" >
+				{% csrf_token %}
+				<input type="submit" value="个人报名"class="gr button1" /></form>
+
+
+
 
 </body>
 </html>

@@ -21,20 +21,34 @@ from lovept import views as lovept_views
 
 
 urlpatterns = [
+    # 主路径
+    path('admin/', admin.site.urls),  # 管理
+    path('', lovept_views.home, name='home'),  # lovept 主界面
 
-    path('activity.html/', lovept_views.activity, name='activity'),
-    path('forget.html/', lovept_views.forget, name='forget'),
-    path('person.html/', lovept_views.person, name='person'),
-    path('person.html/personLeft.html/', lovept_views.personLeft, name='personLeft'),
-    path('person.html/personNavi.html/', lovept_views.personNavi, name='personNavi'),
-    path('person.html/personRight.html/', lovept_views.personRight, name='personRight'),
-    path('signup.html/', lovept_views.signup, name='signup'),#注册
-    path('signin.html/', lovept_views.signin, name='signin'),#登陆
-    path('vol.html/', lovept_views.vol, name='vol'),
-    path('home.html', lovept_views.home, name='home'),#主页
-    path('', lovept_views.home, name='home'),
-    #网页url
-    path('activity.html/vol.html', lovept_views.vol, name='vol'),
-    path('vol.html/worksignin.html', lovept_views.worksignin, name='vworksignin'),
-    path('admin/', admin.site.urls),
+    # 活动
+    path('activity/', lovept_views.activity, name='activity'),
+    path('vol/<int:act_numb>', lovept_views.vol,name='vol'),
+    ###
+
+    # 个人信息
+    path('person/', lovept_views.person, name='person'),
+    path('personLeft/', lovept_views.personLeft, name='personLeft'),
+    path('personNavi/', lovept_views.personNavi, name='personNavi'),
+    path('personRight/', lovept_views.personRight, name='personRight'),
+
+    #登录注册注销
+    path('signup/', lovept_views.signup, name='signup'),#注册
+    path('signin/', lovept_views.signin, name='signin'),#登陆
+    path('signout/', lovept_views.signout, name='signout'),#注销
+    path('forget/', lovept_views.forget, name='forget'),  # 忘记密码
+
+    #报名
+    path('worksignin/', lovept_views.worksignin, name='worksignin'),    #公司报名
+    path('yqmsc/', lovept_views.yqmsc, name='yqmsc'),        #公司报名成功
+    path('yqmtx/', lovept_views.yqmtx, name='yqmtx'),        #公司报名
+
+    # 公益账单
+    path('thing/', lovept_views.thing, name='thing'),
+
+
 ]

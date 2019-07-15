@@ -76,9 +76,9 @@ border-right:0px;
 
 <body background="../static/image/signup_bg.png">
 <div class="ph-heart-nav nav">
-		<a href="../home.html">主页</a>
-		<a href="../activity.html">活动</a>
-		<a href="#">关于我们</a>
+		<a href="../home/">主页</a>
+		<a href="../activity/">公益活动</a>
+		<a href="../thing/">公益账单</a>
 		<a href="#">加入我们</a>
 		<div class="effect">	</div>
 </div>
@@ -86,10 +86,11 @@ border-right:0px;
 	<div class="contain"  align="center">
 		<pre><p class="dl" align="left">您的邀请码是：</p></pre>
 				  <p>&nbsp;</p>
-		<form>
+		<form method="post" action="../yqmtx/">
+            {% csrf_token %}
 		  <div>
 		  <p>   
-		    <input type="text" name="password" class="input" placeholder="邀请码"  style="width:400px"/>
+		    <input type="text" name="coder" class="input" placeholder="邀请码"  style="width:400px"/>
 		  </p>		  
 		  <p>&nbsp;</p>
 		  <p>&nbsp;</p>

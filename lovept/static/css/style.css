@@ -5,7 +5,7 @@ color:#000;
 /* CSS Document */
 .background{
 	width: 100%;
-	min-height: 700px;
+	min-height: 800px;
     display: online-block;
     background: url(../image/9.jpg)no-repeat  ;
 	background-size: cover;
@@ -212,8 +212,8 @@ left:0.1em;
 }
 /*活动照片格式*/
 .view {
-  width: 250px;
-  height: 167px;
+  width: 400px;
+  height: 300px;
   border: 10px solid #fff;
   overflow: hidden;
   position: relative;
@@ -222,15 +222,15 @@ left:0.1em;
   background: #fff;
 	border-radius: 5px;
 	margin: 20px auto;
-	box-shadow:0 1px 0 0 #FFFFFF, 0 2px 0 0 #CCCCCC, 0 3px 0 0 #FFFFFF, 0 4px 0 0 #CCCCCC,0 5px 0 0 #fff,0 6px 0 0 #CCCCCC;
+	box-shadow:0 1px 0 0 #FFFFFF, 0 2px 0 0 #fff, 0 3px 0 0 #FFFFFF, 0 4px 0 0 #CCCCCC,0 5px 0 0 #fff,0 6px 0 0 #fff;
 }
 .view .mask, .view .content {
-  width: 250px;
-  height: 167px;
+  width: 400px;
+  height: 300px;
   position: absolute;
   overflow: hidden;
-  top: 0;
-  left: 0
+  top: 6px;
+  left: 12px
 }
 .view img {
   display: block;
@@ -312,7 +312,7 @@ left:0.1em;
 }
 .view-tenth p {
   background:transparent;
-  color: #333;
+  color: #fff;
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -428,3 +428,33 @@ p.footer-class a:hover{
   margin-left: auto;
   }
 /*--//footer--*/
+/*数字滚动开始*/
+.col_half { width: 49%; }
+.col_third { width: 32%; }
+.col_fourth { width: 23.5%; }
+.col_fifth { width: 18.4%; }
+.col_sixth { width: 15%; }
+.col_three_fourth { width: 74.5%;}
+.col_twothird{ width: 66%;}
+.col_half,
+.col_third,
+.col_twothird,
+.col_fourth,
+.col_three_fourth,
+.col_fifth{
+	position: relative;
+	display:inline;
+	display: inline-block;
+	float: left;
+	margin-right: 2%;
+	margin-bottom: 20px;
+}
+.end { margin-right: 0 !important; }
+
+
+.wrapper { width: 980px; margin: 80px auto; position: relative;}
+.counter { background-color: #FFE4E1; padding: 25px 0; border-radius: 50px;}
+.count-title { font-size: 40px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
+.count-text { font-size: 13px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
+.fa-2x { margin: 0 auto; float: left; display: table; color: #4ad1e5; }
+/*数字滚动结束*/

@@ -75,16 +75,16 @@ border-right:0px;
 
 <body background="../static/image/signup_bg.png">
 <div class="ph-heart-nav nav">
-		<a href="../home.html">主页</a>
-		<a href="../activity.html">活动</a>
-		<a href="../vol.html">关于我们</a>
-		<a href="../vol.html">加入我们</a>
+		<a href="../">主页</a>
+		<a href="../activity/">公益活动</a>
+		<a href="../thing/">公益账单</a>
+		<a href="#">加入我们</a>
 		<div class="effect">	</div>
 </div>
 <div class="up-logo"><img src="../static/image/logo.png" height="74" class="logo"  style="margin-top:15px" /> <span class="body STYLE6">爱心公益</span></div>
 	<div class="contain"  align="center">
 		<pre><p class="dl">登&nbsp;&nbsp;陆</p></pre>
-		<form action="/signin.html/" class="signin" method="POST">
+		<form action="../signin/" class="signin" method="POST">
             {% if message %}
                     <div class="alert alert-warning">{{ message }}</div>
             {% endif %}
@@ -99,7 +99,7 @@ border-right:0px;
 		    <input type="password" name="password" class="input" placeholder="密码"  required="required"  style="width:400px"/>
 		  </p>
 		  <p>&nbsp;</p>
-		  <p>&nbsp;</p><div align="right"><a href="signup.html" class="zc">注册</a>&nbsp;/&nbsp;<a href="forget.html" class="zc" style=" margin-right:20px;">忘记密码</a></div>
+		  <p>&nbsp;</p><div align="right"><a href="../signup/" class="zc">注册</a></div>
 		  <p>&nbsp;</p>
 		  <p>
 		    <input type="submit" value="登陆" class="button1"/>

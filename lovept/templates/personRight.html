@@ -5,35 +5,38 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>个人主页</title>
-    <link rel="stylesheet" href="../static/css/base.css" media="screen and (min-width: 840px)" />
+    <link rel="stylesheet" href="../../static/css/base.css" media="screen and (min-width: 840px)" />
 
 </head>
 <body>
 
 <div id="wrapper">
+    {% csrf_token %}
     <div class="header">
         <div class="header-title">
-            <span class="author-name">XXX</span>
+            <span class="author-name">{{ request.session.user_name }}</span>
             <span class="author-intro"></span>
         </div>
+    </div>
+<!--
         <div class="header-list">
             <div class="header-left">
                 <ul>
-                    <li>联系方式： 18888888888</li>
-                    <li>邮箱： <a href="mailto:xxxxxxx@163.com">xxxxxxx@qq.com</a></li>
-                    <li>学历： 本科/硕士/博士</li>
+                    <li>姓名： </li>
+                    <li>身份证号： </li>
+                    <li>联系方式： </li>
                 </ul>
             </div>
             <div class="header-right">
                 <ul>
-                    <li>期望职位： XXXXXXX</li>
+                    <li>期望职位： 程序猿</li>
                     <li>期望城市： 深圳（优先），北杭（考虑）</li>
                     <li>当前坐标： 深圳</li>
                 </ul>
             </div>
             <div class="clear-fix"></div>
         </div>
-    </div>
+    </div> --->
 
     <div class="person-info">
         <span class="icon"></span>
@@ -41,33 +44,36 @@
         <span class="long-line"></span>
         <div class="detail-list">
             <div class="info-left">
-                <span>籍贯： XXXXX</span>
-                <span>学校： XX学校/XX专业/2012</span>
-                <span>工作年限： 4年</span>
+                    <li>姓名： {{ request.session.user_tname }}</li>
+                    <li>身份证号： {{ request.session.user_id }}</li>
+                    <li>联系方式： {{ request.session.user_telenumb }}</li>
             </div>
+            <!--
             <div class="info-right">
                 <span>出生年月： 1993.08.28/天秤座</span>
                 <span>GitHub： <a href="#">www.xxxxxx.com</a></span>
                 <span>个人网站： <a href="#">www.xxxxxx.com</a></span>
-            </div>
+            </div>   --->
+
             <div class="clear-fix"></div>
         </div>
   </div>
-
     <div class="pro-skill">
         <span class="icon"></span>
         <a name="hdqk"><span class="subtitle">活动情况</span></a>
         <span class="long-line"></span>
         <div class="detail-list">
             <ul>
-                <li>Web开发： Javascript(精通)/xxx/xxxx/xxxxxx/xxxxx</li>
-                <li>前端： HTML(5)/xxxxx/xxxxxx/xxxxxx/xxxxx/xxxxxxx</li>
-                <li>数据库： MySQL/xxxx</li>
-                <li>服务器相关： 熟悉Linux基本命令/xxxxx</li>
+                {% for ActJoin in lists %}
+                    <p><li>活动名称：{{ ActJoin.v_numb }}</li></p>
+                    <p>参与时间：{{ ActJoin.j_btime}}</p>
+                    <p>退出时间：{{ ActJoin.j_etime}}</p>
+                {% endfor %}
             </ul>
         </div>
     </div>
 
+<!--
     <div class="work-experience">
         <span class="icon"></span>
         <span class="subtitle">工作经历</span>
@@ -143,7 +149,7 @@
                 </ul>
             </div>
         </div>
-
+--->
         <div class="clear-fix"></div>
     </div>
 </div>
